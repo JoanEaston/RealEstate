@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "CreateProperty";
+}
+
+<h2>CreateProperty</h2>
+
+<div class="row">
+  
+   <form action="/Home/Create" method="post" class="form form-horizontal" enctype="multipart/form-data">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="form-group">
+            <label>Title:</label>  <input type="text" name="Title" class="form-control" placeholder="Type title here"/>
+            <label>Description:</label><input type="text" name="Description" class="form-control" />
+            <span>Select File:</span><input type="file" name="postedFiles" class="form-control" multiple />
+            <br />
+            <input type="submit" value="Save" class="form-control "/>
+        </div>
+    </div>
+
+
+    </form>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a href="/Home/Index" class="btn btn-success">Home</a>
+    </div>
+</div>

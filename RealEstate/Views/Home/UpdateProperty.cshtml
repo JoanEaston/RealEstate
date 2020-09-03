@@ -1,0 +1,28 @@
+﻿@model RealEstate.Models.Property
+@{
+    ViewData["Title"] = "CreateProperty";
+}
+
+<h2>UpdateProperty</h2>
+
+<div class="row">
+
+    <form action="/Home/Update" method="post" class="form form-horizontal" enctype="multipart/form-data">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="form-group">
+                <label>Title:</label>  <input type="text" name="Title" class="form-control" placeholder="Type title here" value="@Model.Title" />
+                <label>Description:</label><input type="text" name="Description" class="form-control" value="@Model.Description"/>
+                <span>Select File:</span><input type="file" name="postedFiles" class="form-control" value="@Model.ImageUrl" multiple />
+                <br />
+                <input type="submit" value="Update" class="form-control " />
+            </div>
+        </div>
+
+
+    </form>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a href="/Home/Index" class="btn btn-success">Home</a>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿@model RealEstate.Models.Property
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+
+    <h4>Property</h4>
+    <hr />
+  
+<div class="row">
+<div class="col-md-3 col-md-offset-3">
+<label>Title:</label>
+</div>
+    <div class="col-md-3">
+        @Model.Title
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3 col-md-offset-3">
+        <label>Description:</label>
+    </div>
+    <div class="col-md-3">
+        @Model.Description
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3 col-md-offset-3">
+        <label>Image:</label>
+    </div>
+    <div class="col-md-3">
+        <img src="~/Uploads/@Model.ImageUrl" style="width:250px;" class="img-rounded"/>
+    </div>
+</div>
+<a href="/Home/Index">Back to Index</a>

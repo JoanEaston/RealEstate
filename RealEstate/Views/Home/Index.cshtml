@@ -1,0 +1,31 @@
+﻿@using RealEstate.Models
+@model IEnumerable<Property>
+@{
+    ViewData["Title"] = "Index";
+    // Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Real Estate</h2>
+
+@foreach (var property in Model)
+{
+    <div class="row">
+        <div class="col-md-1">@property.Id</div>
+        <div class="col-md-3"><a class="col-md-2" href="/Home/Details/@property.Id">@property.Title</a> </div>
+        <div class="col-md-7">@property.Description</div>
+        <div class="col-md-1"><a class="btn btn-warning btn-xs" href="/Home/UpdateProperty/@property.Id">Update</a>|<a class="btn btn-danger btn-xs" href="/Home/DeleteProperty/@property.Id">Delete</a></div>
+
+    </div>
+
+
+}
+
+
+
+<div>
+    @if (ViewBag.Message != null)
+    {
+        <span>@ViewBag.Message</span>
+    }
+</div>
+
+<a href="/Home/CreateProperty" class="btn btn-primary">Go to Create Page</a>
