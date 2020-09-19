@@ -13,7 +13,10 @@ namespace RealEstate.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
-        
+
+        public decimal Price { get; set; }
+        public decimal? OldPrice { get; set; }
+
         [NotMapped]
         public List<IFormFile> postedFiles { get; set; }
     }

@@ -26,7 +26,7 @@ namespace RealEstate.Controllers
 
             var properties = _propertyRepository.GetAll();
 
-            return View(properties);
+            return View("Index1", properties);
         }
 
         public IActionResult Details(int id)
@@ -34,7 +34,7 @@ namespace RealEstate.Controllers
 
             var property = _propertyRepository.GetProperty(id);
 
-            return View(property);
+            return View("Details1",property);
         }
 
         [HttpGet]
@@ -51,7 +51,7 @@ namespace RealEstate.Controllers
         [HttpGet]
         public IActionResult CreateProperty()
         {
-            return View();
+            return View("CreateProperty1");
         }
 
 
@@ -62,7 +62,7 @@ namespace RealEstate.Controllers
             string wwwPath = this.Environment.WebRootPath;
             string contentPath = this.Environment.ContentRootPath;
 
-            string path = Path.Combine(this.Environment.WebRootPath, "Uploads");
+            string path = Path.Combine(this.Environment.WebRootPath, "assets/Uploads");
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);

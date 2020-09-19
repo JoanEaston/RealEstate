@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="wwwroot\Uploads\" />  
+    <Folder Include="wwwroot\assets\Uploads\" />  
   </ItemGroup>
 
   <ItemGroup>
